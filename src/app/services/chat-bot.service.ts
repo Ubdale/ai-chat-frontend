@@ -11,7 +11,7 @@ export class ChatBotService {
   public sendMessage(message: string) {
   // return this.http.post(this.apiUrl, {message: message});
     return this.http.post<{ user: string; message: string }>(
-  `${this.apiUrl}`,
+  `${this.apiUrl}/chat`,
   { message }
 );
 
