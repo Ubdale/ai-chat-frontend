@@ -21,9 +21,9 @@ messages: Message[] = [];
 sendMessage(){
   this.ChatBotService.sendMessage(this.message).subscribe((data: any) => {
     this.messages.push({ user: 'User', message: this.message });
+    this.message = '';
     console.log(data);
     this.messages.push({user: 'Bot', message: data.message});
-    this.message = '';
   }
   )}
 }
