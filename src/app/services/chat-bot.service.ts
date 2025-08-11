@@ -10,6 +10,10 @@ export class ChatBotService {
   constructor(private http: HttpClient) { }
   public sendMessage(message: string) {
   // return this.http.post(this.apiUrl, {message: message});
-    return this.http.post<{ user: string; message: string }>(this.apiUrl, { message });
+    return this.http.post<{ user: string; message: string }>(
+  `${this.apiUrl}/chat`,
+  { message }
+);
+
   }
 }
