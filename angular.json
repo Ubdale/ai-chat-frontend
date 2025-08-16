@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "../ai-chat-backend/public",
+            "outputPath": "dist/my-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
